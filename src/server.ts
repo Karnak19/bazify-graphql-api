@@ -17,4 +17,6 @@ export default new ApolloServer({
     }
     return { prisma: prisma, user };
   },
+  introspection: true,
+  playground: true,
 });
