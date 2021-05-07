@@ -3,6 +3,7 @@ import passport from "passport";
 
 import server from "./server";
 import auth from "./auth";
+import api from "./api";
 
 const PORT = process.env.PORT || 4000;
 
@@ -17,6 +18,7 @@ const app = express();
   require("./passport");
 
   app.use("/auth", auth);
+  app.use("/api/v1", api);
 
   await new Promise((resolve) =>
     app.listen({ port: PORT }, () => {

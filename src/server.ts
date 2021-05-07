@@ -3,7 +3,7 @@ import { ApolloServer, AuthenticationError } from "apollo-server-express";
 import prisma from "../prisma/client";
 import resolvers from "./resolvers";
 import typeDefs from "./typeDefs";
-import checkToken from "./utils";
+import { checkToken } from "./utils";
 
 export default new ApolloServer({
   typeDefs,
