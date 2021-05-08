@@ -1,5 +1,6 @@
 import express from "express";
 import passport from "passport";
+import cors from "cors";
 
 import server from "./server";
 import auth from "./auth";
@@ -13,6 +14,8 @@ const app = express();
   await server.start();
 
   server.applyMiddleware({ app });
+
+  app.use(cors());
 
   app.use(passport.initialize());
   require("./passport");
