@@ -32,5 +32,8 @@ export default gql`
 
     artists: [Artist]
     artist(id: ID!): Artist
+
+    albums: [Album]
+    album(id: ID!): Album
   }
 `;

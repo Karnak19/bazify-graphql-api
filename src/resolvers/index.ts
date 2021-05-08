@@ -1,11 +1,12 @@
 import { songQuery, songRelationResolver } from "./songs";
 import { artistQuery, artistRelationResolver } from "./artists";
-import { albumRelationResolver } from "./albums";
+import { albumQuery, albumRelationResolver } from "./albums";
 
 const resolvers = {
   Query: {
     ...songQuery,
     ...artistQuery,
+    ...albumQuery,
   },
   // Mutation: {},
   Song: {
