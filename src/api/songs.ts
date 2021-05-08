@@ -1,6 +1,6 @@
 import fs from "fs";
 import express from "express";
-import mm from "music-metadata";
+import * as mm from "music-metadata";
 import FileType from "file-type";
 
 import { s3UploadFile } from "../aws";
