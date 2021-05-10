@@ -17,7 +17,12 @@ const app = express();
   app.use(passport.initialize());
   require("./passport");
 
-  server.applyMiddleware({ app });
+  server.applyMiddleware({
+    app,
+    cors: {
+      origin: "*",
+    },
+  });
 
   app.use("/auth", auth);
   app.use("/api/v1", api);
