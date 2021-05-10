@@ -13,12 +13,11 @@ const app = express();
 (async () => {
   await server.start();
 
-  server.applyMiddleware({ app });
-
   app.use(cors());
-
   app.use(passport.initialize());
   require("./passport");
+
+  server.applyMiddleware({ app });
 
   app.use("/auth", auth);
   app.use("/api/v1", api);
